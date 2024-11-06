@@ -80,6 +80,17 @@ cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 hist(probs, main = "Histogram of Probabilities", xlab = "Probability", col = "lightblue", border = "black")
 
 ```
+```{r}
+cat("probability Dr.J wins is",mean_probs)
+```
+
+
+```{r}
+EV= (0.815)*1*26-(1-.815)*1*26
+print(EV)
+```
+
+Dr. J wins on average $16.38 when he plays the game.
 
 ```{r}
 # Calculate 95% confidence interval
