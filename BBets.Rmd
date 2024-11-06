@@ -106,7 +106,7 @@ get answers for a smaller class
 
 ```{r}
 # Simulation settings
-class_size <- 27
+class_size <- 23
 n_sim <- 1000
 n_trials <- 100
 
