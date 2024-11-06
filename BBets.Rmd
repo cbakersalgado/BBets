@@ -1,8 +1,8 @@
 ---
 title: "BBets"
-author: "Your Name Here"
+author: "Cienna Baker-Salgado"
 output: html_document
-date: "2024-09-27"
+date: "Fall 2024"
 ---
 
 This assignment is designed to:
