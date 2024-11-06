@@ -49,7 +49,7 @@ same_birthday_prob <- function(class_size, n_sim) {
 }
 
 # Simulation settings
-class_size <- 35
+class_size <- 25
 n_sim <- 1000
 n_trials <- 100
 
@@ -102,11 +102,35 @@ cat("95% Confidence Interval for the Mean Probability: [", conf_interval[1], ","
 ```
 
 
+```{r}
+# Simulation settings
+class_size <- 35
+n_sim <- 1000
+n_trials <- 100
+
+# Vector to store the probabilities from each trial
+probs <- numeric(n_trials)
+
+# Run the simulation 100 times
+for (i in 1:n_trials) {
+  probs[i] <- same_birthday_prob(class_size, n_sim)
+}
+mean_probs=mean(probs)
+print(mean_probs)
+```
+
+```{r}
+FairBet= mean_probs/(1-mean_probs)
+cat("FairBet=",FairBet)                          
+```
+To make the bet fair, Dr.J should pay up to $4.40.
+
+
 get answers for a smaller class
 
 ```{r}
 # Simulation settings
-class_size <- 23
+class_size <- 27
 n_sim <- 1000
 n_trials <- 100
 
@@ -133,7 +157,11 @@ cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 
 ```
 
-
+```{r}
+EV= mean_probs*1*20 - (1-mean_probs)*1*20
+cat("AverageWin=",EV)
+```
+For a class size of 27 with 20 students betting, Dr.J's profit would be $5.17
 
 ### Explanation:
 
